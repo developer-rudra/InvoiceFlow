@@ -1,0 +1,31 @@
+{
+  "name": "invoiceflow",
+  "version": "1.0.0",
+  "description": "InvoiceFlow - Invoice & Client Management System (MERN Stack)",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "node server/utils/seed.js",
+    "test": "npm test --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "mern",
+    "invoice",
+    "client-management",
+    "express",
+    "mongodb",
+    "react",
+    "vite",
+    "tailwind"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.3"
+  }
+}
