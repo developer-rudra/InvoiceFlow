@@ -237,12 +237,3 @@ Rather than requiring manual status updates when an invoice becomes overdue, `ev
 To prevent orphaned invoices or broken billing histories, `deleteClient()` checks `Invoice.countDocuments({ client: clientId })`. If invoices exist, deletion is aborted and returns HTTP 400 Bad Request with message: `"This client cannot be deleted because invoices exist for this client."`
 
 ---
-
-## 🎯 Interview Explanation Summary
-
-When presenting this project during a technical interview, emphasize:
-1. **Separation of Concerns**: Modular `Route -> Controller -> Service -> Model` architecture.
-2. **Security & Authorization**: JWT token validation in express middleware, user ownership scoping on every database query.
-3. **Backend Source of Truth**: Defensive calculation logic ignoring frontend-supplied totals.
-4. **Data Integrity**: Business safeguards on client deletion and unique invoice numbering.
-5. **Aesthetics & UX**: Responsive SaaS dashboard, skeleton loading states, empty state handling, print & PDF support.
