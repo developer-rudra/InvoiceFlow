@@ -36,7 +36,7 @@ InvoiceFlow is a production-grade, full-stack **MERN (MongoDB, Express.js, React
 
 ### Backend
 - **Runtime**: Node.js & Express.js
-- **Database**: MongoDB Atlas & Mongoose ORM
+- **Database**: MongoDB Atlas 
 - **Authentication**: JSON Web Token (JWT) & bcryptjs
 - **Validation**: express-validator middleware
 - **Testing**: Jest & Supertest
@@ -67,73 +67,9 @@ MongoDB Atlas Database
 
 ---
 
-## 📂 Monorepo Folder Structure
+<img width="4574" height="6995" alt="diagram" src="https://github.com/user-attachments/assets/c2de7565-15e9-4507-b29d-648bd9a5341e" />
 
-```text
-InvoiceFlow/
-│
-├── client/                     # Frontend Vite + React application
-│   ├── public/
-│   ├── src/
-│   │   ├── assets/             # Static graphics
-│   │   ├── components/
-│   │   │   ├── clients/        # Client form modals & tables
-│   │   │   ├── common/         # Badge, Skeleton, EmptyState, Modal
-│   │   │   ├── invoices/       # Invoice forms & detail views
-│   │   │   └── layout/         # Responsive AppLayout & Sidebar
-│   │   ├── context/            # AuthContext for global JWT state
-│   │   ├── pages/              # Login, Register, Dashboard, Clients, Invoices
-│   │   ├── services/           # Axios API services (auth, client, invoice, dashboard)
-│   │   ├── utils/              # Currency formatters, PDF generator, CSV exporter
-│   │   ├── App.jsx             # Route definitions & guards
-│   │   ├── main.jsx            # React root entry
-│   │   └── index.css           # Tailwind base styles & print CSS
-│   ├── .env.example
-│   ├── index.html
-│   ├── package.json
-│   ├── vite.config.js
-│   └── tailwind.config.js
-│
-├── server/                     # Backend Express REST API
-│   ├── config/                 # Mongoose DB connection (db.js)
-│   ├── controllers/            # Route handler logic (auth, client, invoice, dashboard)
-│   ├── middleware/             # Auth JWT, error handler, validator check
-│   ├── models/                 # Mongoose schemas (User, Client, Invoice)
-│   ├── routes/                 # API endpoint routers
-│   ├── services/               # Business logic & calculation services
-│   ├── tests/                  # Jest unit tests (calculations, overdue logic)
-│   ├── utils/                  # Calculations, overdue evaluator, invoice auto-number, seed
-│   ├── validators/             # Input validation rules
-│   ├── app.js                  # Express app setup & CORS configuration
-│   ├── server.js               # Node server entry point
-│   ├── .env.example
-│   └── package.json
-│
-├── .gitignore
-├── .env.example
-├── README.md                   # Complete documentation
-└── package.json                # Monorepo root scripts
-```
 
----
-
-## 🔑 Environment Variables
-
-### Root / Server (`server/.env`)
-```env
-PORT=5000
-MONGO_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?appName=Cluster0
-JWT_SECRET=your_jwt_secret_key_here
-CLIENT_URL=http://localhost:5173
-NODE_ENV=development
-```
-
-### Client (`client/.env`)
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
----
 
 ## ⚡ Quick Start & Running Locally
 
